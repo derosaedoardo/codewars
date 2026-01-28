@@ -21,7 +21,7 @@ describe("Take a Ten Minutes Walk", () => {
 
   it("Returns false when it does not return to start", () => {
     assert.strictEqual(
-      isValidWalk(["n", "n", "n", "n", "n", "s", "s", "s", "s", "s"]),
+      isValidWalk(["n", "n", "n", "n", "n", "n", "s", "s", "s", "s"]),
       false
     );
     assert.strictEqual(
