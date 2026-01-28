@@ -2,7 +2,9 @@
   "name": "codewars",
   "version": "1.0.0",
   "scripts": {
-    "test": "mocha \"**/*.test.js\" \"**/*.tst.js\""
+    "test": "mocha",
+    "test:all": "mocha \"**/*.test.js\" \"**/*.tst.js\"",
+    "test:file": "mocha \"**/${npm_config_file}\""
   },
   "type": "module",
   "private": true,

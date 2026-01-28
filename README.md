@@ -13,13 +13,25 @@ The project is configured as an ES Modules package (`"type": "module"`), so test
 From the repository root:
 
 ```bash
-npx mocha "kata-folder/kata-file.test.js"
+npm test -- "kata-folder/kata-file.test.js"
 ```
 
 Example:
 
 ```bash
-npx mocha "does-my-number-look-big-in-this/does-my-number-look-big-in-this.test.js"
+npm test -- "does-my-number-look-big-in-this/does-my-number-look-big-in-this.test.js"
+```
+
+## Run tests by filename (from any subfolder)
+
+```bash
+npm run test:file --file=detect-pangram.test.js
+```
+
+## Run all tests
+
+```bash
+npm run test:all
 ```
 
 ## Folder structure
