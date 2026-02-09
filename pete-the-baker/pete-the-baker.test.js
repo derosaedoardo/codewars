@@ -8,43 +8,37 @@ describe("Pete, the Baker", () => {
     assert.strictEqual(
       cakes(
         { flour: 500, sugar: 200, eggs: 1 },
-        { flour: 1200, sugar: 1200, eggs: 5, milk: 200 }
+        { flour: 1200, sugar: 1200, eggs: 5, milk: 200 },
       ),
-      2
+      2,
     );
     assert.strictEqual(
       cakes(
         { flour: 500, sugar: 200, eggs: 1 },
-        { flour: 500, sugar: 200, eggs: 1 }
+        { flour: 500, sugar: 200, eggs: 1 },
       ),
-      1
+      1,
     );
     assert.strictEqual(
       cakes(
         { flour: 500, sugar: 200, eggs: 1 },
-        { flour: 499, sugar: 200, eggs: 1 }
+        { flour: 499, sugar: 200, eggs: 1 },
       ),
-      0
+      0,
     );
   });
 
   it("Missing ingredients result in 0", () => {
     assert.strictEqual(
-      cakes(
-        { flour: 500, sugar: 200, eggs: 1 },
-        { flour: 1200, sugar: 1200 }
-      ),
-      0
+      cakes({ flour: 500, sugar: 200, eggs: 1 }, { flour: 1200, sugar: 1200 }),
+      0,
     );
   });
 
   it("Ignores extra available ingredients", () => {
     assert.strictEqual(
-      cakes(
-        { flour: 200, sugar: 100 },
-        { flour: 400, sugar: 100, milk: 1000 }
-      ),
-      1
+      cakes({ flour: 200, sugar: 100 }, { flour: 400, sugar: 100, milk: 1000 }),
+      1,
     );
   });
 });

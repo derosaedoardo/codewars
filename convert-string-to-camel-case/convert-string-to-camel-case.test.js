@@ -7,10 +7,7 @@ describe("Convert string to camel case", () => {
   it("Basic examples", () => {
     assert.strictEqual(toCamelCase("the_stealth_warrior"), "theStealthWarrior");
     assert.strictEqual(toCamelCase("The-Stealth-Warrior"), "TheStealthWarrior");
-    assert.strictEqual(
-      toCamelCase("A-B-C"),
-      "ABC"
-    );
+    assert.strictEqual(toCamelCase("A-B-C"), "ABC");
   });
 
   it("Preserves first word casing", () => {

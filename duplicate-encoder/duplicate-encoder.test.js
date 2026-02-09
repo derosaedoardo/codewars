@@ -10,7 +10,7 @@ describe("Duplicate Encoder", () => {
     assert.strictEqual(
       duplicateEncode("Success"),
       ")())())",
-      "should ignore case"
+      "should ignore case",
     );
     assert.strictEqual(duplicateEncode("(( @"), "))((");
   });
